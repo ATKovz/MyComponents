@@ -10,7 +10,7 @@
 
 ## PageBar
 
-翻页
+### 翻页
 
 - totalPage: number 总页数
 - handleChange: fn(index) 回调函数，第一个参数是页码
@@ -19,6 +19,6 @@
 
 ## NavBar
 
-导航条
+### 导航条
 
 待完善
