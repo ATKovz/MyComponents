@@ -1,0 +1,141 @@
+@import "../../global.less";
+@import "../../icon.less";
+@import "../../variable.less";
+
+.nav{
+	&--block{
+		.flex-row;
+		.row-y-center;
+		height: 40px;
+		width: 1150px;
+		position: relative;
+		margin: 0 auto 10px;
+		border-bottom: 1px solid @Red;
+	}
+	&--both{
+		.iconfont;
+		background-color: #404040;
+		color: #fff;
+		width: 200px;
+		font-size: 16px;
+		height: 40px;
+		line-height: 40px;
+		cursor: pointer;
+		&:hover{
+			.nav--list{
+				display: block;
+				z-index: 11;
+			}
+		}
+	}
+	&--item{
+		padding: 0 30px;
+		border-right: 1px solid @Red;
+		font-weight: bold;
+		font-size: 15px;
+		height: 20px;
+		line-height: 20px;
+		cursor: pointer;
+		&:hover{
+			color: @Red;
+		}
+	}
+	&--list{
+		position: relative;
+		width: 200px;
+		z-index: 2;
+		display: none;
+		&--title{
+			margin-left: 30px;
+		}
+		&--item{
+			.flex-row;
+			.row-y-center;
+			.row-space-between;
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			background-color: @Red;
+			border-top: 1px solid rgba(255, 255, 255, .6);
+			text-align: center;
+			.arrow{
+				width: 10px;
+				height: 10px;
+				border-width: 2px 2px 0 0;
+				border-color: #fff;
+				border-style: solid;
+				margin-right: 20px;
+				transform: rotate(45deg);
+			}
+			&:hover{
+				background-color: #fff;
+				color: @Red;
+				.arrow{
+					border-color: @Red;
+				}
+				.category--block{
+					.flex-row;
+				}
+			}
+		}
+	}
+}
+
+.category{
+	&--block{
+		display: none;
+		flex-wrap: wrap;
+		position: absolute;
+		left: 200px;
+		top: 0px;
+		padding: 30px;
+		width: 660px;
+		height: 400px;
+		box-sizing: border-box;
+		font-size: 14px;
+		text-align: left;
+		background-color: #fff;
+		border: 1px solid @Red;
+	}
+	&--brandlist{
+		.flex-row;
+		.row-space-between;
+		width: 600px;
+		border-bottom: 1px dashed #999;
+		img{
+			height: 90px;
+		}
+	}
+	&--item{
+		width: 360px;
+		height: 225px;
+		h3{
+			color: #555555;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+		&--list{
+			.flex-row;
+			.row-left;
+			width: 100%;
+			line-height: 14px;
+			color: #999999;
+			.item{
+				margin-right: 5px;
+			}
+		}
+	}
+	&--ad{
+		width: 225px;
+		height: 225px;
+		background-color: pink;
+		margin-top: 20px;
+	}
+}
+
+.mask{
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	z-index: 2;
+}
